@@ -33,9 +33,21 @@ dialogContent:{
   padding:20
 },
 closeButton:{
+  [theme.breakpoints.down('xs')]: {
+    position:"absolute",
+    left:"80%",
+    marginTop:4
+  },
+  [theme.breakpoints.up('sm')]: {
+    position:"absolute",
+    left:"90%",
+    marginTop:4
+  },
+[theme.breakpoints.up('md')]: {
   position:"absolute",
   left:"90%",
   marginTop:4
+  }
 },
 expandButton:{
   [theme.breakpoints.down('xs')]: {

@@ -11,6 +11,25 @@ import CalendarToday from "@material-ui/icons/CalendarToday";
 
 const styles=theme=>({
   ...theme.spreadThis,
+  paper:{
+    [theme.breakpoints.down('sm')]: {
+      padding:20,
+      marginBottom:20,
+      marginLeft:35,
+      marginRight:35
+    },
+    [theme.breakpoints.up('sm')]: {
+      padding:20,
+      marginLeft:100,
+      marginRight:100,
+      marginBottom:20
+    },
+  [theme.breakpoints.up('md')]: {
+      padding:20,
+      marginLeft:100,
+      marginRight:20
+    }
+  },
   handle:{
     height:20,
     backgroundColor:theme.palette.primary.main,

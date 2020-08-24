@@ -48,7 +48,11 @@ const styles=theme=>({
   image:{
 
     [theme.breakpoints.down('xs')]: {
-    minWidth:150
+    width:80,
+    height:65,
+    borderRadius:"50%",
+    marginTop:20,
+    marginLeft:20
     },
     [theme.breakpoints.up('sm')]: {
     minWidth:150,
@@ -70,16 +74,9 @@ const styles=theme=>({
  }
 
 
-},
-spanEdit:{
-  [theme.breakpoints.down('sm')]: {
-    display:"block",
-    width:150,
-
-
 }
 
-}
+
 });
 class Memory extends Component{
 
@@ -102,12 +99,12 @@ return(
     <Typography variant="body1">{body}</Typography>
     <LikeButton memoryId={memoryId}/>
     <span>{likeCount} Likes</span>
-    <span className={classes.spanEdit}>
+
     <MyButton tip="comments">
     <ChatIcon color="primary"/>
     </MyButton>
     <span>{commentCount} Comments</span>
-    </span>
+
     <MemoryDialog memoryId={memoryId} userName={userName} openDialog={this.props.openDialog}/>
     </CardContent>
     </Card>

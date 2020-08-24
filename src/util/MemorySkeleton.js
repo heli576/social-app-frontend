@@ -12,8 +12,28 @@ import withStyles from "@material-ui/core/styles/withStyles";
 const styles=theme=>({
   ...theme.spreadThis,
   card:{
+    [theme.breakpoints.down('xs')]: {
+      position:"relative",
+      display:"flex",
+      marginTop: 20,
+ marginLeft:10,
+ marginRight:10,
+
+
+    },
+    [theme.breakpoints.up('sm')]: {
+      position:"relative",
+      display:"flex",
+       marginBottom: 20,
+       marginRight:60,
+       marginLeft:60
+    },
+  [theme.breakpoints.up('md')]: {
+    position:"relative",
     display:"flex",
-    marginBottom:20
+     marginBottom: 20,
+     marginRight:100
+    }
 
   },
   cardContent:{
@@ -22,8 +42,19 @@ const styles=theme=>({
     padding:25
   },
   cover:{
-    minWidth:200,
-    objectFit:"cover"
+    [theme.breakpoints.down('xs')]: {
+    width:80,
+    height:65,
+    borderRadius:"50%",
+    marginTop:20,
+    marginLeft:20
+    },
+    [theme.breakpoints.up('sm')]: {
+    minWidth:150,
+    },
+  [theme.breakpoints.up('md')]: {
+      minWidth:200,
+    }
   },
   handle:{
     width:60,

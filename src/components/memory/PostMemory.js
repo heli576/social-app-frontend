@@ -27,9 +27,22 @@ const styles=theme=>({
     position:"absolute"
   },
   closeButton:{
+
+    [theme.breakpoints.down('xs')]: {
+      position:"absolute",
+      left:"80%",
+      marginTop:4
+    },
+    [theme.breakpoints.up('sm')]: {
+      position:"absolute",
+      left:"90%",
+      marginTop:4
+    },
+  [theme.breakpoints.up('md')]: {
     position:"absolute",
-    left:"91%",
-    top:"6%"
+    left:"90%",
+    marginTop:4
+    }
   }
 })
 
